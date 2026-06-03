@@ -17,6 +17,7 @@ function NoteDetailsClient() {
     queryKey: ['note', noteId],
     queryFn: () => fetchNoteById(noteId),
     enabled: Boolean(noteId),
+    refetchOnMount: false,
   });
 
   if (isLoading) {
